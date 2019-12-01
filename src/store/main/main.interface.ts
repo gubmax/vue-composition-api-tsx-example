@@ -4,6 +4,7 @@ import { IStoreState } from '@/store/store.interface' // eslint-disable-line imp
 
 export interface IStoreMainModuleState {
   msg: string,
+  responseData: any,
 }
 
 export type TMainStoreModule = Module<IStoreMainModuleState, IStoreState>
