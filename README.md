@@ -1,4 +1,4 @@
-# vue-composition-api-test-app
+# vue-composition-api-tsx-example
 
 ## Project setup
 ```
