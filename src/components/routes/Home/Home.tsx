@@ -35,7 +35,11 @@ const Home = () => {
   return () => (
     <div>
       <img alt="Vue logo" src={ImageLogo} />
-      <HelloWorld msg="This text is a prop!"/>
+
+      <HelloWorld msg="This text is a prop!">
+        <p slot="named">This text from named slot!</p>
+        <p>This text from default slot!</p>
+      </HelloWorld>
 
       <h1>{getters.mainMsg}</h1>
       <button onClick={() => dispatch('changeMsg')}>mutate</button>

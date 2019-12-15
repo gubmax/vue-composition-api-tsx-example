@@ -9,7 +9,7 @@ const HelloWorld = createComponent({
       required: true,
     },
   },
-  setup({ msg }) {
+  setup({ msg }, { slots }) {
     const state = reactive({
       count: msg.length,
     })
@@ -25,6 +25,8 @@ const HelloWorld = createComponent({
     return () => (
       <div>
         <h1>{msg}</h1>
+        {slots.default()}
+        {slots.named()}
         <button onClick={decrement}>-</button>
         <span class={s.counter}>{state.count}</span>
         <button onClick={increment}>+</button>
